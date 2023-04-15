@@ -18,6 +18,10 @@ export interface Pokemon {
     stats: PokemonStat[];
     types: PokemonType[];
 }
+export interface PokemonSpecies {
+    name: string,
+    url: string
+}
 
 export interface PokemonAbility {
     is_hidden: true;
@@ -26,10 +30,6 @@ export interface PokemonAbility {
         name: string
         url: string
     };
-}
-export interface PokemonSpecies {
-    name: string,
-    url: string
 }
 
 export interface PokemonMoveVersion {

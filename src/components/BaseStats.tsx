@@ -8,11 +8,14 @@ const BaseStats = () => {
   const renderStats = () => {
     return globalPokemon.stats.map((stat) => {
       return (
-        <div className="my-2 grid grid-cols-2 ">
-          <p className="text-sm font-bold text-slate-400 capitalize">
+        <div className="my-2 grid grid-cols-5 ">
+          <p className="text-sm font-bold text-slate-400 capitalize col-span-2">
             {stat.stat.name}
           </p>
-          <div className="flex items-center">
+          <p className="text-sm font-semibold text-slate-700 capitalize">
+            {stat.base_stat}
+          </p>
+          <div className="flex items-center col-span-2">
             <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
               <div
                 className="bg-blue-600 h-2.5 rounded-full"
