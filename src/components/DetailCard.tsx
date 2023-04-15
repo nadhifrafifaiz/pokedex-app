@@ -5,7 +5,7 @@ import Evolution from "./Evolution";
 import Moves from "./Moves";
 
 const DetailCard = () => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(2);
   return (
     <div className=" px-4">
       <div className="flex flex-row justify-between my-4">
