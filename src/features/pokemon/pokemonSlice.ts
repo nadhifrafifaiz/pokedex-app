@@ -19,6 +19,10 @@ export interface Pokemon {
     types: PokemonType[];
 }
 
+export interface PokemonSpecies {
+    name: string,
+    url: string
+}
 export interface PokemonAbility {
     is_hidden: true;
     slot: number;
@@ -28,10 +32,6 @@ export interface PokemonAbility {
     };
 }
 
-export interface PokemonSpecies {
-    name: string,
-    url: string
-}
 export interface PokemonMoveVersion {
     level_learned_at: number
     move_learn_method: {
