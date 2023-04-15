@@ -23,17 +23,31 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
     }
   };
 
+  const getOrderNumber = (order: number) => {
+    if (order <= 9) {
+      return `#00${order}`;
+    } else if (order <= 99) {
+      return `#0${order}`;
+    } else {
+      return `#${order}`;
+    }
+  };
   return (
     <div
-      className={`h-15 aspect-[4/3] rounded-lg p-4 relative hover:cursor-pointer hover:opacity-90 ${getTypeColor(
+      className={`h-15 aspect-[4/3] rounded-lg p-4 relative hover:cursor-pointer hover:opacity-90 shadow-md ${getTypeColor(
         pokemon.types[0].type.name
       )}`}
     >
-      <div className="grid grid-cols-2">
+      <div className="">
         <div className="flex flex-col gap-2">
-          <p className="capitalize font-extrabold text-2xl opacity-70">
-            {pokemon.name}
-          </p>
+          <div className="flex flex-row justify-between">
+            <p className="capitalize font-semibold text-base ">
+              {pokemon.name}
+            </p>
+            <p className="capitalize font-extrabold text-xl opacity-10 text-black">
+              {getOrderNumber(pokemon.order)}
+            </p>
+          </div>
           <div className="flex flex-col gap-1">
             {pokemon.types.map((type) => {
               return (
@@ -49,7 +63,7 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
       </div>
       <img
         src={pokemon.sprites.front_default}
-        className="absolute right-0 bottom-0 h-36 md:h-24 lg:h-48"
+        className="absolute right-0 bottom-0 h-24 lg:h-36"
       />
     </div>
   );

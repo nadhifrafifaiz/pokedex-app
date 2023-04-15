@@ -8,7 +8,7 @@ import PokemonCard from "../components/PokemonCard";
 function Home() {
   const dispatch = useAppDispatch();
   const [offset, setOffset] = useState<number>(0);
-  const [limit, setLimit] = useState<number>(10);
+  const [limit, setLimit] = useState<number>(20);
   const globalPokemons = useAppSelector((state) => state.pokemon.pokemons);
 
   const fetchPokemons = async () => {
@@ -40,7 +40,7 @@ function Home() {
       <h2 className="text-4xl font-bold text-slate-700 my-2 mb-6 md:my-4 md:mb-10 ">
         Pokedex
       </h2>
-      <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4 ">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-6 md:gap-4 ">
         {renderPokemon()}
       </div>
     </div>
