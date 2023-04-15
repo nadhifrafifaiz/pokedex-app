@@ -7,16 +7,48 @@ export interface Pokemon {
     is_default: boolean;
     order: number;
     weight: number;
-    // abilities: IPokemonAbility[];
+    abilities: PokemonAbility[];
     // forms: Array<INamedApiResource<IPokemonForm>>;
     // game_indices: IVersionGameIndex[];
     // held_items: IPokemonHeldItem[];
     // location_area_encounters: string;
-    // moves: IPokemonMove[];
+    moves: PokemonMove[];
     sprites: PokemonSprites;
-    // species: INamedApiResource<IPokemonSpecies>;
+    species: PokemonSpecies;
     stats: PokemonStat[];
     types: PokemonType[];
+}
+
+export interface PokemonAbility {
+    is_hidden: true;
+    slot: number;
+    ability: {
+        name: string
+        url: string
+    };
+}
+
+export interface PokemonSpecies {
+    name: string,
+    url: string
+}
+export interface PokemonMoveVersion {
+    level_learned_at: number
+    move_learn_method: {
+        name: string
+        url: string
+    }
+    version_group: {
+        name: string
+        url: string
+    }
+}
+export interface PokemonMove {
+    move: {
+        name: string
+        url: string
+    };
+    version_group_details: PokemonMoveVersion[];
 }
 
 export interface PokemonStat {
@@ -44,13 +76,15 @@ export interface PokemonType {
     };
 }
 
-type InitialState = {
-    pokemon: Pokemon
+
+
+type SetPokemons = {
     pokemons: Pokemon[]
     totalCount: number
 }
 
-type SetPokemons = {
+type InitialState = {
+    pokemon: Pokemon
     pokemons: Pokemon[]
     totalCount: number
 }
@@ -61,8 +95,6 @@ const initialState: InitialState = {
     totalCount: 0
 }
 
-
-
 const pokemonSlice = createSlice({
     name: 'pokemon',
     initialState,
@@ -70,9 +102,12 @@ const pokemonSlice = createSlice({
         setPokemons: (state, action: PayloadAction<SetPokemons>) => {
             state.pokemons = action.payload.pokemons
             state.totalCount = action.payload.totalCount
+        },
+        setPokemon: (state, action: PayloadAction<Pokemon>) => {
+            state.pokemon = action.payload
         }
     }
 })
 
 export default pokemonSlice.reducer
-export const { setPokemons } = pokemonSlice.actions
+export const { setPokemons, setPokemon } = pokemonSlice.actions

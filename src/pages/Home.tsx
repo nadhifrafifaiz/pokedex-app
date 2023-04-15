@@ -27,7 +27,7 @@ function Home() {
 
   const renderPokemon = () => {
     return globalPokemons.map((pokemon: Pokemon) => {
-      return <PokemonCard pokemon={pokemon} />;
+      return <PokemonCard pokemon={pokemon} key={pokemon.id} />;
     });
   };
 
