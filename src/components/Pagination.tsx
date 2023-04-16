@@ -52,19 +52,12 @@ const Pagination: React.FC<PaginationProps> = (props) => {
             return (
               <button
                 key={number}
-                className="inline-flex items-center px-4 py-2 text-xs md:text-sm font-medium text-white bg-gray-800 border-0 border-l border-gray-700  hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                className={`inline-flex items-center px-4 py-2 text-xs md:text-sm font-medium text-white  border-0 border-l  dark:hover:text-white
+                ${currentPage === number ? "bg-gray-500" : "bg-gray-800"}
+                `}
                 onClick={() => directPage(number)}
               >
                 <p>{number}</p>
-                {/* <a
-                  href="#"
-                  className={`block hover:text-white hover:bg-blue-500 rounded-full px-3 py-2 ${
-                    currentPage === number ? "bg-blue-500 text-white" : ""
-                  }`}
-                  onClick={() => directPage(number)}
-                >
-                  {number}
-                </a> */}
               </button>
             );
           }
