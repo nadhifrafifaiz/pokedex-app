@@ -19,28 +19,20 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --primary: white;
-  --secondary: #dcdcdc;
+  --primary: #dcdcdc;
+  --secondary: white;
 }
 
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--secondary) var(--primary);
+/* Hide scrollbar for WebKit-based browsers (e.g. Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0.5em;
 }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 10px;
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
-*::-webkit-scrollbar-track {
-  background: var(--primary);
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: var(--secondary);
-  border-radius: 14px;
-  border: 2px solid var(--primary);
+::-webkit-scrollbar-thumb {
+  background-color: #a5a5a5;
+  border-radius: 1em;
 }

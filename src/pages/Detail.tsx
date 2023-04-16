@@ -80,7 +80,7 @@ const Detail = () => {
           <div className="container mx-auto md:w-1/2 xl:w-1/3 p-4">
             <div className="grid grid-cols-4 py-4">
               <div className="col-span-3">
-                <p className="capitalize font-extrabold text-3xl text-white opacity-80">
+                <p className="capitalize font-extrabold text-5xl text-white opacity-80">
                   {globalPokemon.name}
                 </p>
                 <div className="flex flex-row gap-1 ">
@@ -115,7 +115,7 @@ const Detail = () => {
                 <svg
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute -top-20 w-3/4 opacity-30 "
+                  className="absolute lg:-top-20 w-3/4 opacity-30 "
                 >
                   <path
                     fill={getColor(globalPokemon.types[0].type.name)}
@@ -127,7 +127,7 @@ const Detail = () => {
                 <svg
                   viewBox="0 0 200 200"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute -top-20 w-4/5 opacity-30 "
+                  className="absolute lg:-top-20 w-4/5 opacity-30 "
                 >
                   <path
                     fill={getColor(globalPokemon.types[0].type.name)}
