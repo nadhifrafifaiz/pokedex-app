@@ -7,17 +7,17 @@ import Moves from "./Moves";
 const DetailCard = () => {
   const [activeTab, setActiveTab] = useState(1);
   return (
-    <div className="px-4  ">
-      <div className="flex flex-row justify-between my-4">
+    <div className="bg-white min-h-[45vh] max-h-[45vh] rounded-xl  px-4 sm:px-8 xl:px-10  overflow-y-scroll">
+      <div className="flex flex-row justify-between sticky top-0 bg-white pt-8">
         <div
           className={`text-sm font-bold hover:cursor-pointer hover:text-slate-600 ${
             activeTab === 1 ? "text-slate-600" : "text-slate-400"
           } `}
           onClick={() => setActiveTab(1)}
         >
-          <p>About</p>
+          <p className="text-sm xl:text-base">About</p>
           {activeTab == 1 ? (
-            <hr className="h-1 mx-auto my-4 bg-gray-100 border-0 rounded dark:bg-gray-700" />
+            <hr className="h-1 mx-auto mt-2 mb-2 bg-gray-100 border-0 rounded dark:bg-gray-700" />
           ) : null}
         </div>
         <div
@@ -26,9 +26,9 @@ const DetailCard = () => {
           } `}
           onClick={() => setActiveTab(2)}
         >
-          <p>Base Stats</p>
+          <p className="text-sm xl:text-base">Base Stats</p>
           {activeTab == 2 ? (
-            <hr className="h-1 mx-auto my-4 bg-gray-100 border-0 rounded dark:bg-gray-700" />
+            <hr className="h-1 mx-auto mt-2 mb-2 bg-gray-100 border-0 rounded dark:bg-gray-700" />
           ) : null}
         </div>
         <div
@@ -37,9 +37,9 @@ const DetailCard = () => {
           } `}
           onClick={() => setActiveTab(3)}
         >
-          <p>Evolution</p>
+          <p className="text-sm xl:text-base">Evolution</p>
           {activeTab == 3 ? (
-            <hr className="h-1 mx-auto my-4 bg-gray-100 border-0 rounded dark:bg-gray-700" />
+            <hr className="h-1 mx-auto mt-2 mb-2 bg-gray-100 border-0 rounded dark:bg-gray-700" />
           ) : null}
         </div>
         <div
@@ -48,13 +48,13 @@ const DetailCard = () => {
           } `}
           onClick={() => setActiveTab(4)}
         >
-          <p>Moves</p>
+          <p className="text-sm xl:text-base">Moves</p>
           {activeTab == 4 ? (
-            <hr className="h-1 mx-auto my-4 bg-gray-100 border-0 rounded dark:bg-gray-700" />
+            <hr className="h-1 mx-auto mt-2 mb-2 bg-gray-100 border-0 rounded dark:bg-gray-700" />
           ) : null}
         </div>
       </div>
-      <div>
+      <div className="mt-3">
         {activeTab == 1 ? (
           <About />
         ) : activeTab == 2 ? (

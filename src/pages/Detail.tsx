@@ -65,7 +65,7 @@ const Detail = () => {
         globalPokemon.id ? getTypeColor(globalPokemon.types[0].type.name) : null
       }`}
     >
-      <div className="container mx-auto md:w-1/2">
+      <div className="container mx-auto md:w-1/2 xl:w-1/3">
         <div className="grid grid-cols-4 p-4 ">
           <div className="col-span-3">
             <p className="capitalize font-extrabold text-3xl text-white opacity-60">
@@ -101,9 +101,7 @@ const Detail = () => {
               src={globalPokemon?.sprites?.front_default}
             />
           </div>
-          <div className="bg-white min-h-[43vh] rounded-t-3xl p-2">
-            {globalPokemon.id ? <DetailCard /> : "tidak ada"}
-          </div>
+          <div>{globalPokemon.id ? <DetailCard /> : "tidak ada"}</div>
         </div>
       </div>
     </div>
