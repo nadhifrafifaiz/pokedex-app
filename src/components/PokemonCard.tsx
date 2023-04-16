@@ -13,11 +13,11 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
   const getTypeColor = (type: string): string => {
     switch (type) {
       case "grass":
-        return "bg-green-300";
+        return "bg-green-500";
       case "fire":
         return "bg-red-500";
       case "water":
-        return "bg-blue-300";
+        return "bg-blue-500";
       // Add more cases for other Pokemon types
       default:
         return "bg-slate-500";
@@ -45,7 +45,7 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
       <div className="">
         <div className="flex flex-col gap-2">
           <div className="flex flex-row justify-between">
-            <p className="capitalize font-extrabold opacity-90 text-xs sm:text-sm xl:text-base  text-white ">
+            <p className="capitalize font-extrabold opacity-90 text-sm sm:text-sm xl:text-base  text-white ">
               {pokemon.name}
             </p>
             <p className="capitalize font-extrabold text-xs sm:text-sm xl:text-base  opacity-30 text-black">

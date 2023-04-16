@@ -39,11 +39,11 @@ const Detail = () => {
   const getTypeColor = (type: string): string => {
     switch (type) {
       case "grass":
-        return "bg-green-300";
+        return "bg-green-500";
       case "fire":
         return "bg-red-500";
       case "water":
-        return "bg-blue-300";
+        return "bg-blue-500";
       // Add more cases for other Pokemon types
       default:
         return "bg-slate-500";
