@@ -36,7 +36,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="p-2 md:p-4 container mx-auto md:w-1/2">
+    <div className="p-2 md:p-4 container mx-auto md:w-1/2 font-league">
       <h2 className="text-4xl font-bold text-slate-700 my-2 mb-6">Pokedex</h2>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-2 lg:grid-cols-3">
         {renderPokemon()}

@@ -13,14 +13,14 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
   const getTypeColor = (type: string): string => {
     switch (type) {
       case "grass":
-        return "bg-green-400";
+        return "bg-green-300";
       case "fire":
-        return "bg-red-400";
+        return "bg-red-500";
       case "water":
-        return "bg-blue-400";
+        return "bg-blue-300";
       // Add more cases for other Pokemon types
       default:
-        return "bg-slate-400";
+        return "bg-slate-500";
     }
   };
 

@@ -10,23 +10,29 @@ const Moves = () => {
     return globalPokemon.moves.map((move) => {
       return (
         <div className="border-2 my-1 px-3 py-2 rounded-md">
-          <p className="capitalize text-sm font-extrabold text-slate-600">
+          <p className="capitalize text-sm font-extrabold text-slate-400">
             {move.move.name}
           </p>
           {move.version_group_details.map((details) => {
             return (
-              <div className="grid grid-cols-8 text-sm font-light">
+              <div className="grid grid-cols-8 text-sm font-light my-2">
                 <div className="flex flex-row items-center gap-2">
-                  <p className="font-extrabold text-xs">Lv</p>
-                  <p>{details.level_learned_at}</p>
+                  <p className="font-extrabold text-xs text-green-600">Lv</p>
+                  <p className="font-medium text-xs capitalize text-slate-400">
+                    {details.level_learned_at}
+                  </p>
                 </div>
                 <div className="flex flex-row items-center gap-2 col-span-2">
-                  <MdUpgrade />
-                  <p>{details.move_learn_method.name}</p>
+                  <MdUpgrade color="orange" />
+                  <p className="font-medium text-xs capitalize text-slate-400">
+                    {details.move_learn_method.name}
+                  </p>
                 </div>
                 <div className="flex flex-row items-center gap-2 col-span-5">
-                  <BiBookBookmark />
-                  <p>{details.version_group.name}</p>
+                  <BiBookBookmark color="light-blue" />
+                  <p className="font-medium text-xs capitalize text-slate-400">
+                    {details.version_group.name}
+                  </p>
                 </div>
               </div>
             );
