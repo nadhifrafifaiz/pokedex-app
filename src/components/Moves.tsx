@@ -3,7 +3,7 @@ import { useAppSelector } from "../app/hooks";
 import { MdUpgrade } from "react-icons/md";
 import { BiBookBookmark } from "react-icons/bi";
 
-const Moves = () => {
+const Moves: React.FC = () => {
   const globalPokemon = useAppSelector((state) => state.pokemon.pokemon);
 
   const renderMoves = () => {

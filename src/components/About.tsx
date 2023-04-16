@@ -2,7 +2,7 @@ import React from "react";
 import { useAppSelector } from "../app/hooks";
 import { PokemonAbility } from "../features/pokemon/pokemonSlice";
 
-const About = () => {
+const About: React.FC = () => {
   const globalPokemon = useAppSelector((state) => state.pokemon.pokemon);
 
   const parseAbility = (abilities: PokemonAbility[]) => {

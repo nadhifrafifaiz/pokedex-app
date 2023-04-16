@@ -4,7 +4,7 @@ import BaseStats from "./BaseStats";
 import Evolution from "./Evolution";
 import Moves from "./Moves";
 
-const DetailCard = () => {
+const DetailCard: React.FC = () => {
   const [activeTab, setActiveTab] = useState(1);
   return (
     <div className="bg-white min-h-[50vh] max-h-[50vh] rounded-xl  px-4 sm:px-8 xl:px-10 overflow-y-scroll">

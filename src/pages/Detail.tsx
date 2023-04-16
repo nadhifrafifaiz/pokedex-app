@@ -80,7 +80,7 @@ const Detail = () => {
           <div className="container mx-auto md:w-1/2 xl:w-1/3 p-4">
             <div className="grid grid-cols-4 py-4">
               <div className="col-span-3">
-                <p className="capitalize font-extrabold text-5xl text-white opacity-80">
+                <p className="capitalize font-extrabold text-3xl text-white opacity-80">
                   {globalPokemon.name}
                 </p>
                 <div className="flex flex-row gap-1 ">

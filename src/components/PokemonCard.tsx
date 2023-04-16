@@ -44,7 +44,7 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
     >
       <div className="">
         <div className="flex flex-col gap-2">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between items-center">
             <p className="capitalize font-extrabold opacity-90 text-sm sm:text-sm xl:text-base  text-white ">
               {pokemon.name}
             </p>

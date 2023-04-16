@@ -1,6 +1,6 @@
 import { useAppSelector } from "../app/hooks";
 
-const BaseStats = () => {
+const BaseStats: React.FC = () => {
   const globalPokemon = useAppSelector((state) => state.pokemon.pokemon);
 
   const renderStats = () => {
