@@ -61,14 +61,14 @@ const Detail = () => {
   };
   return (
     <div
-      className={`w-screen h-screen   ${
+      className={`  ${
         globalPokemon.id ? getTypeColor(globalPokemon.types[0].type.name) : null
       }`}
     >
-      <div className="container mx-auto md:w-1/2 xl:w-1/3">
-        <div className="grid grid-cols-4 p-4 ">
+      <div className="container mx-auto md:w-1/2 xl:w-1/3 p-4">
+        <div className="grid grid-cols-4 py-4">
           <div className="col-span-3">
-            <p className="capitalize font-extrabold text-3xl text-white opacity-60">
+            <p className="capitalize font-extrabold text-3xl text-white opacity-80">
               {globalPokemon.name}
             </p>
             <div className="flex flex-row gap-1 ">
@@ -77,7 +77,7 @@ const Detail = () => {
                     return (
                       <div
                         key={type.slot}
-                        className="rounded-full bg-slate-200 opacity-40 w-fit px-2 py-1 "
+                        className="rounded-full bg-slate-200 opacity-60 w-fit px-2 py-1 "
                       >
                         <p className="text-xs capitalize font-bold text-slate-600 opacity-100">
                           {type.type.name}
@@ -88,7 +88,7 @@ const Detail = () => {
                 : null}
             </div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-end items-center">
             <p className="capitalize font-extrabold text-xl opacity-40 text-black">
               {getOrderNumber(globalPokemon.order)}
             </p>

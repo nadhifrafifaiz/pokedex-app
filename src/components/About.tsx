@@ -21,11 +21,13 @@ const About = () => {
       </p>
       <p className="text-sm font-bold text-slate-400">Height</p>
       <p className="text-sm font-bold text-slate-600 col-span-2">
-        {globalPokemon.height} cm
+        {globalPokemon.height} cm / {(globalPokemon.height / 2.54).toFixed(2)}{" "}
+        inch
       </p>
       <p className="text-sm font-bold text-slate-400">Weight</p>
       <p className="text-sm font-bold text-slate-600 col-span-2">
-        {globalPokemon.weight} kg
+        {globalPokemon.weight / 10} kg /{" "}
+        {((globalPokemon.weight / 10) * 2.2046).toFixed(1)} lbs
       </p>
       <p className="text-sm font-bold text-slate-400">Abilities</p>
       <div className="text-sm font-bold text-slate-600 col-span-2">

@@ -7,7 +7,7 @@ import Moves from "./Moves";
 const DetailCard = () => {
   const [activeTab, setActiveTab] = useState(1);
   return (
-    <div className="bg-white min-h-[45vh] max-h-[45vh] rounded-xl  px-4 sm:px-8 xl:px-10  overflow-y-scroll">
+    <div className="bg-white min-h-[50vh] max-h-[50vh] rounded-xl  px-4 sm:px-8 xl:px-10  overflow-y-scroll">
       <div className="flex flex-row justify-between sticky top-0 bg-white pt-8">
         <div
           className={`text-sm font-bold hover:cursor-pointer hover:text-slate-600 ${
