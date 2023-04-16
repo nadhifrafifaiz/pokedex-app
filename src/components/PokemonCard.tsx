@@ -45,10 +45,10 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
       <div className="">
         <div className="flex flex-col gap-2">
           <div className="flex flex-row justify-between">
-            <p className="capitalize font-semibold text-base text-white ">
+            <p className="capitalize font-extrabold opacity-90 text-xs sm:text-sm xl:text-base  text-white ">
               {pokemon.name}
             </p>
-            <p className="capitalize font-extrabold text-xl opacity-10 text-black">
+            <p className="capitalize font-extrabold text-xs sm:text-sm xl:text-base  opacity-30 text-black">
               {getOrderNumber(pokemon.order)}
             </p>
           </div>
@@ -56,7 +56,7 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
             {pokemon.types.map((type) => {
               return (
                 <div className="rounded-full bg-slate-200 opacity-40 w-fit px-2 py-1 ">
-                  <p className="text-xs capitalize font-bold text-slate-600 opacity-100">
+                  <p className="text-[0.6rem] xl:text-xs  capitalize font-bold text-slate-600 opacity-100">
                     {type.type.name}
                   </p>
                 </div>
@@ -67,7 +67,7 @@ const PokemonCard: React.FC<PokemonCardProps> = (props) => {
       </div>
       <img
         src={pokemon.sprites.front_default}
-        className="absolute right-0 bottom-0 h-24 lg:h-36"
+        className="absolute right-0 bottom-0 h-20 xl:h-32"
       />
     </div>
   );

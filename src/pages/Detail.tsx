@@ -61,47 +61,49 @@ const Detail = () => {
   };
   return (
     <div
-      className={`w-screen h-screen md:px-16  ${
+      className={`w-screen h-screen   ${
         globalPokemon.id ? getTypeColor(globalPokemon.types[0].type.name) : null
       }`}
     >
-      <div className="grid grid-cols-4 p-4 md:mb-10">
-        <div className="col-span-3">
-          <p className="capitalize font-extrabold text-3xl text-white opacity-60 md:text-7xl">
-            {globalPokemon.name}
-          </p>
-          <div className="flex flex-row gap-1 md:mt-5">
-            {globalPokemon.id
-              ? globalPokemon.types.map((type) => {
-                  return (
-                    <div
-                      key={type.slot}
-                      className="rounded-full bg-slate-200 opacity-40 w-fit px-2 py-1 "
-                    >
-                      <p className="text-xs capitalize font-bold text-slate-600 opacity-100">
-                        {type.type.name}
-                      </p>
-                    </div>
-                  );
-                })
-              : null}
+      <div className="container mx-auto md:w-1/2">
+        <div className="grid grid-cols-4 p-4 ">
+          <div className="col-span-3">
+            <p className="capitalize font-extrabold text-3xl text-white opacity-60">
+              {globalPokemon.name}
+            </p>
+            <div className="flex flex-row gap-1 ">
+              {globalPokemon.id
+                ? globalPokemon.types.map((type) => {
+                    return (
+                      <div
+                        key={type.slot}
+                        className="rounded-full bg-slate-200 opacity-40 w-fit px-2 py-1 "
+                      >
+                        <p className="text-xs capitalize font-bold text-slate-600 opacity-100">
+                          {type.type.name}
+                        </p>
+                      </div>
+                    );
+                  })
+                : null}
+            </div>
+          </div>
+          <div className="flex justify-center items-center">
+            <p className="capitalize font-extrabold text-xl opacity-40 text-black">
+              {getOrderNumber(globalPokemon.order)}
+            </p>
           </div>
         </div>
-        <div className="flex justify-center items-center">
-          <p className="capitalize font-extrabold text-xl opacity-40 text-black md:text-3xl">
-            {getOrderNumber(globalPokemon.order)}
-          </p>
-        </div>
-      </div>
-      <div className="flex flex-col justify-center md:grid md:grid-cols-3 ">
-        <div className="flex flex-row items-center justify-center mt-4 translate-y-0 md:justify-start">
-          <img
-            className="h-64 aspect-square md:h-[18rem] lg:h-[22rem]"
-            src={globalPokemon?.sprites?.front_default}
-          />
-        </div>
-        <div className="bg-white min-h-[43vh] rounded-t-3xl p-2 md:rounded-2xl md:col-span-2 md:w-full md:h-[60svh]">
-          {globalPokemon.id ? <DetailCard /> : "tidak ada"}
+        <div className="flex flex-col justify-center ">
+          <div className="flex flex-row items-center justify-center mt-4 translate-y-0 ">
+            <img
+              className="h-64 aspect-square"
+              src={globalPokemon?.sprites?.front_default}
+            />
+          </div>
+          <div className="bg-white min-h-[43vh] rounded-t-3xl p-2">
+            {globalPokemon.id ? <DetailCard /> : "tidak ada"}
+          </div>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ import Moves from "./Moves";
 const DetailCard = () => {
   const [activeTab, setActiveTab] = useState(1);
   return (
-    <div className=" px-4">
+    <div className="px-4  ">
       <div className="flex flex-row justify-between my-4">
         <div
           className={`text-sm font-bold hover:cursor-pointer hover:text-slate-600 ${
