@@ -5,6 +5,7 @@ import axios from "axios";
 import type { Pokemon } from "../features/pokemon/pokemonSlice";
 import PokemonCard from "../components/PokemonCard";
 import Pagination from "../components/Pagination";
+import Loading from "../components/Loading";
 
 function Home() {
   const dispatch = useAppDispatch();
@@ -61,11 +62,11 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div className="p-2 md:p-4 container mx-auto md:w-1/2 ">
       {isLoading ? (
-        <div>Loading...</div>
+        <Loading />
       ) : (
-        <div className="p-2 md:p-4 container mx-auto md:w-1/2 font-league">
+        <div>
           <div className="my-2">
             <h2 className="text-4xl font-bold text-slate-700 my-2">Pokedex</h2>
             <p>
@@ -90,7 +91,7 @@ function Home() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

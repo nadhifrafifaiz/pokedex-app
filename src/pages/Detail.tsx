@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { Pokemon, setPokemon } from "../features/pokemon/pokemonSlice";
 import axios from "axios";
 import DetailCard from "../components/DetailCard";
+import Loading from "../components/Loading";
 
 const Detail = () => {
   const dispatch = useAppDispatch();
@@ -53,9 +54,9 @@ const Detail = () => {
   const getColor = (type: string): string => {
     switch (type) {
       case "grass":
-        return "green";
+        return "lightgreen";
       case "fire":
-        return "yellow";
+        return "khaki";
       case "water":
         return "white";
       // Add more cases for other Pokemon types
@@ -136,12 +137,12 @@ const Detail = () => {
                   />
                 </svg>
               </div>
-              <div>{globalPokemon.id ? <DetailCard /> : "tidak ada"}</div>
+              <div>{globalPokemon.id ? <DetailCard /> : <Loading />}</div>
             </div>
           </div>
         </div>
       ) : (
-        "Loading..."
+        <Loading />
       )}
     </div>
   );

@@ -5,11 +5,14 @@ import Detail from "./pages/Detail";
 
 function App() {
   return (
-    <div>
+    <div className="font-league">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:pokemonName" element={<Detail />} />
       </Routes>
+      <div className="text-center pb-4 mt-4 text-sm ">
+        Pokedex App - Nadhif Rafifaiz K
+      </div>
     </div>
   );
 }
